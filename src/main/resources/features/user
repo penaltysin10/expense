@@ -1,0 +1,19 @@
+Feature: User
+  As a user, I can add and view income and expense
+  so that I know how much money I have.
+
+  Background:
+    Given a user add balance is 1000
+    Then my balance is  1000
+
+  Scenario: Income amount add to balance
+    When I add 200 to balance
+    Then I have total income is 200
+
+  Scenario: Expense amount less than balance
+    When I spend 300 from balance
+    Then i have total expense is 300
+
+  Scenario: Expense amount more than balance
+    When I spend 1200 from balance
+    Then You can't add expense ,because expense more than balance.
